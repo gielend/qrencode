@@ -762,6 +762,8 @@ ABORT:
 
 static int QRinput_checkModeFNC1Second(int size, const unsigned char *data)
 {
+	(void) data;
+	
 	if(size != 1) return -1;
 
 	return 0;
@@ -769,6 +771,8 @@ static int QRinput_checkModeFNC1Second(int size, const unsigned char *data)
 
 static int QRinput_encodeModeFNC1Second(QRinput_List *entry, int version)
 {
+	(void) version;
+	
 	int ret;
 
 	entry->bstream = BitStream_new();
@@ -822,6 +826,8 @@ int QRinput_estimateBitsModeECI(unsigned char *data)
 
 static int QRinput_encodeModeECI(QRinput_List *entry, int version)
 {
+	(void) version;
+	
 	int ret, words;
 	unsigned int ecinum, code;
 
